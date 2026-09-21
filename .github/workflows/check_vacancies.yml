@@ -2,7 +2,7 @@ name: Vacancy Bot
 
 on:
   schedule:
-    - cron: '0 */2 * * *'  # Har 2 soatda
+    - cron: '0 */6 * * *'  # Har 6 soatda
   workflow_dispatch: {}
 
 concurrency:
