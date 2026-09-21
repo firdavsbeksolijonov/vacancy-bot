@@ -1,0 +1,944 @@
+[
+  {
+    "id": "4102494",
+    "name": "Aloqabank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10603172",
+    "name": "APEX BANK",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "6167349",
+    "name": "Garant bank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9730310",
+    "name": "Hayot Bank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "2648253",
+    "name": "InFinBank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3702770",
+    "name": "Ipotekabank OTP Group",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4173004",
+    "name": "Octobank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11058872",
+    "name": "OPEN BANK AJ",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3180778",
+    "name": "Orient Finans Bank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9115825",
+    "name": "POYTAXT BANK",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12624091",
+    "name": "SHINHAN BANK VAKOLATXONASI",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3537093",
+    "name": "SQB BOSH BANK",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11871906",
+    "name": "TAYANCH MIKROMOLIYA BANKI",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4462936",
+    "name": "Xalq Banki",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3459496",
+    "name": "АИКБ ИПАК ЙУЛИ БАНК",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4426776",
+    "name": "АКБ Asia Alliance Bank",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3926783",
+    "name": "АКБ Агробанк",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5543310",
+    "name": "АКБ «Банк развития бизнеса»",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4084893",
+    "name": "АКБ Тенге Банк",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4348161",
+    "name": "АКБ Туронбанк",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3721806",
+    "name": "АКБ Универсал банк",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4898403",
+    "name": "АО ANOR BANK",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4128276",
+    "name": "АО Асакабанк",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4080670",
+    "name": "Главный центр информатизации ЦБРУ",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "2552465",
+    "name": "Капиталбанк",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "1979551",
+    "name": "КДБ Банк Узбекистан",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11958778",
+    "name": "МMELIBAYEV RASUL BAXRONOVICH",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9459699",
+    "name": "МФО Agat Credit",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9685969",
+    "name": "ООО Finserv Tech",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3779349",
+    "name": "Центральный Банк Республики Узбекистан",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3348343",
+    "name": "ЧАКБ «ДАВР БАНК»",
+    "category": "Bank",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12523666",
+    "name": "AL-MUAMALAT CONSULTING",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9896002",
+    "name": "ARIN GOLDEN FUTURES",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12187420",
+    "name": "ASAR",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12097482",
+    "name": "BDO AUDIT",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3869100",
+    "name": "BUSINESS AUDIT TODAY",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12398715",
+    "name": "CREDIT TECHNOLOGY GROUP",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4671239",
+    "name": "Crowe TAC",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "13026971",
+    "name": "DEBTO",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3575546",
+    "name": "Delоitte&amp;Touche",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3113366",
+    "name": "EY Uzbekistan",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4529249",
+    "name": "Financial Chain Corporation",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12624453",
+    "name": "GOLDER ACC",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12896835",
+    "name": "HPBS",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9002713",
+    "name": "Jetso Capital",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11988917",
+    "name": "JINGSH",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "2838717",
+    "name": "Legalact",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12977295",
+    "name": "MAGRAT SHARQ",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5328125",
+    "name": "Mazars Advisory UZ",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9457989",
+    "name": "OOO LAWTAX",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4655427",
+    "name": "RSP-i",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "13003939",
+    "name": "SA FINANCE INVEST GROUP",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11216118",
+    "name": "SDQ MANAGEMENT ADVISORY GROUP",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "13004362",
+    "name": "TVVIN FIN",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9373924",
+    "name": "VedaVector",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4732755",
+    "name": "АО MOORE CA",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9175874",
+    "name": "АО NEXIA CA EXPERTS",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12644035",
+    "name": "АО ООО BAKER TILLY INTEGRA ADVISER",
+    "category": "Audit / Konsalting",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10631305",
+    "name": "ASSET LEASING AND FINANCE",
+    "category": "Lizing",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4587957",
+    "name": "FINCOM",
+    "category": "Lizing",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4094745",
+    "name": "ООО MK LEASING",
+    "category": "Lizing",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11422206",
+    "name": "ESADO GROUP",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12603585",
+    "name": "FINORDA INSURANCE BROKER",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12618682",
+    "name": "FLEXY",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5855637",
+    "name": "KAFIL SUGURTA",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12644529",
+    "name": "KAFOLAT HAYOT INSURANCE",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11702590",
+    "name": "SHAMSIDDIN ABDULAZIZOV XUSNITDIN O`G`LI",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9168838",
+    "name": "SUMMA GROUP Co.",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5848352",
+    "name": "АО СО INSON",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4058877",
+    "name": "Национальная страховая компания Узбекинвест",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9061453",
+    "name": "СК IMPEX INSURANCE",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "6168512",
+    "name": "СП АО EUROASIA INSURANCE",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5536817",
+    "name": "Страхование компания APEX LIFE",
+    "category": "Sugurta",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5032890",
+    "name": "ABRAU Capital",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12985229",
+    "name": "HEALTH INVEST",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4927958",
+    "name": "IMAN CAPITAL LTD",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4326733",
+    "name": "Portfolio Investments",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12557575",
+    "name": "RCA VERUM INVEST",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9812159",
+    "name": "SOF GROUP MANAGEMENT LLC",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3819635",
+    "name": "Uzoman Capital",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12855039",
+    "name": "WAY II MANAGEMENT",
+    "category": "Investitsiya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12745845",
+    "name": "PAYNOW",
+    "category": "Kollektorlar",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4091065",
+    "name": "ABSOFT",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3803549",
+    "name": "ALLIANCE BUSINESS CONSULT",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11695074",
+    "name": "ANDERSEN-CONSULTING",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4240351",
+    "name": "ASSISTANT BUSINESS MARKET",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11134110",
+    "name": "ATB CONSULT HOLDING",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12790296",
+    "name": "AVIZO ACADEMIYASI",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12721479",
+    "name": "A’ZAMOVA XONZODAXON SARVARJON QIZI",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10050526",
+    "name": "BUKHUCHET PLUS",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12455395",
+    "name": "CALCULATOR.UZ",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12525621",
+    "name": "CLARUS ACCOUNTING GROUP",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12156547",
+    "name": "E-FINANCIFY",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12239789",
+    "name": "FINTAXHOUSE",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4860198",
+    "name": "Galaktika Biznes",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12868984",
+    "name": "GREAT WALL FINANCIAL ADVISORY",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12772393",
+    "name": "INTELLECT LINGO",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11004256",
+    "name": "IVENTURE ACCOUNTING GROUP",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12342117",
+    "name": "JACARANDA CAPITAL",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5789210",
+    "name": "Kun.uz (ООО WEB EXPERT)",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9441283",
+    "name": "LEADING BUSINESS SOFTWARE",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10921564",
+    "name": "LOIALTE",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12711746",
+    "name": "LUCKYTRUST",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9589537",
+    "name": "Nadejniy Buxgalter",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12785903",
+    "name": "NEXUS PARTNERS",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4505583",
+    "name": "OnlineOffice",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12535869",
+    "name": "PANSHI FINANS",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4428107",
+    "name": "Perfect balance",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4322466",
+    "name": "SCHNEIDER GROUP",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9963445",
+    "name": "SOLVETT COMPLIANCE SERVICES",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4018583",
+    "name": "TURAN OS",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10558583",
+    "name": "UNITED TAX ADVISORS",
+    "category": "Buxgalteriya",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9773663",
+    "name": "AI-BROK",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12899607",
+    "name": "AMANAT TECH",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "3861866",
+    "name": "BIZNES FINANS MIKROMOLIYA TASHKILOTI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12552041",
+    "name": "BIZNESNI RIVOJLANTIRISH MIKROMOLIYA TASHKILOTI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12843761",
+    "name": "CHOYKHONA",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12418421",
+    "name": "COLL PRO",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4301596",
+    "name": "Grand Broker Trade",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12921922",
+    "name": "GSK-1",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12923633",
+    "name": "HUMAN GENERATED TECHNOLOGIES",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12985293",
+    "name": "ILXOMOV NODIRBEK DILSHOD O‘G‘LI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4553560",
+    "name": "Mikrokreditbank",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4429167",
+    "name": "MIKROKREDIT TASHKILOTI ELIT MICROFINANS",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10089659",
+    "name": "MODERN TECH PLANET",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5459161",
+    "name": "MULTICARD PAYMENT",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12932730",
+    "name": "MUQIMOV TIMURBEK NABIJON O‘G‘LI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "6144807",
+    "name": "OCTO",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "13016540",
+    "name": "OLMOS FINANCE",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12121188",
+    "name": "OSON-KREDIT",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12765870",
+    "name": "OSON MOLIYA",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9587240",
+    "name": "PAYLATER",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12612440",
+    "name": "PLATINUM LOMBARD",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12843529",
+    "name": "POS RETAIL",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9753947",
+    "name": "RENESANS MIKROMOLIYA TASHKILOTI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12147184",
+    "name": "SARMOYA-MADAD LOMBARD",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4497401",
+    "name": "SBAM TRADE",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "13027586",
+    "name": "TEZ MASLAHAT MAKONI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12741907",
+    "name": "TIMSEID SCHOOL",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12194762",
+    "name": "TOSHKENT TOVAR XOMASHYO BIRJASI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11600172",
+    "name": "TRADINGACADEMY",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4477948",
+    "name": "UZCARD (АО ЕОПЦ)",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5166122",
+    "name": "Variant Retail Finance",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11554536",
+    "name": "VIDA CONSTA MOMENT",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12368485",
+    "name": "XOLMATOV AZIZJON ASQARJON O‘G‘LI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5773507",
+    "name": "Yengil Kredit Mikrokredit Tashkiloti",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10839898",
+    "name": "ZOLOTO LOMBARD",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11946869",
+    "name": "ИП ООО CHINARA BIZNES KREDIT LOMBARD",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12007666",
+    "name": "ИП ООО TASFINANCE MIKROMOLIYA TASHKILOTI",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "4594479",
+    "name": "Компания по рефинансированию ипотеки Узбекистана",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "10329810",
+    "name": "ООО HURMA LOMBARD",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "6149420",
+    "name": "ООО Kreditomat Tashkent Mikrokredit Tashkiloti",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "12012665",
+    "name": "ООО МФО IMPACT FINANCE LEADERS",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "9608581",
+    "name": "Представительство IDEMIA France в Узбекистане",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11919965",
+    "name": "СП ООО МФО KORONA",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "11776833",
+    "name": "СП ООО МФО UNA MOLIYA",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  },
+  {
+    "id": "5650235",
+    "name": "Электрон Бахолаш",
+    "category": "Kredit / Broker / Lombard",
+    "industry": "Moliya / Bank / Fintech"
+  }
+]

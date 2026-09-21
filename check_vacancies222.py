@@ -49,7 +49,14 @@ SEARCH_KEYWORDS = [
 # "analitikning", "analitikaga" kabi qo'shimchali shakllarni ham qamrab
 # oladi). \b (so'z chegarasi) tufayli "bilan", "database" kabi so'zlar
 # ichidagi tasodifiy moslik hisobga olinmaydi.
-ROOT_PATTERNS = [re.compile(rf"\b{re.escape(w)}\w*", re.IGNORECASE) for w in SEARCH_KEYWORDS]
+ROOT_PATTERNS = [
+    re.compile(
+        rf"\b{re.escape(w)}(?!base)\w*" if w.lower() == "data"
+        else rf"\b{re.escape(w)}\w*",
+        re.IGNORECASE,
+    )
+    for w in SEARCH_KEYWORDS
+]
 
 RSS_URL = "https://tashkent.hh.uz/search/vacancy/rss"
 SEEN_IDS_FILE = "seen_ids.json"
@@ -101,15 +108,23 @@ HEADERS = {
 
 def load_seen_ids():
     if os.path.exists(SEEN_IDS_FILE):
-        with open(SEEN_IDS_FILE, "r", encoding="utf-8") as f:
-            return set(json.load(f))
+        try:
+            with open(SEEN_IDS_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            return set(data) if isinstance(data, list) else set()
+        except (OSError, json.JSONDecodeError, TypeError):
+            print(f"Warning: unable to read {SEEN_IDS_FILE}; starting with empty state")
     return set()
 
 
 def save_seen_ids(seen_ids):
     ids_list = list(seen_ids)[-MAX_STORED_IDS:]
-    with open(SEEN_IDS_FILE, "w", encoding="utf-8") as f:
+    temp_file = f"{SEEN_IDS_FILE}.tmp"
+    with open(temp_file, "w", encoding="utf-8") as f:
         json.dump(ids_list, f)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(temp_file, SEEN_IDS_FILE)
 
 
 def strip_html(text):
@@ -316,9 +331,9 @@ def fetch_vacancies():
 
 def format_message(vacancy):
     return (
-        f"📊 <b>{vacancy['title']}</b>\n"
-        f"{vacancy['description']}\n"
-        f"🔗 {vacancy['link']}"
+        f"📊 <b>{html.escape(vacancy['title'])}</b>\n"
+        f"{html.escape(vacancy['description'])}\n"
+        f"🔗 {html.escape(vacancy['link'])}"
     )
 
 

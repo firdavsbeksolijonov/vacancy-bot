@@ -37,8 +37,31 @@ engines (e.g. "Project Manager" appearing in an "analyst" search).
 
 - Python 3.11
 - `requests` for HTTP
+- `feedparser`, `pandas`, `beautifulsoup4`, `rapidfuzz`, and `openpyxl`
 - `xml.etree.ElementTree` for feed parsing
 - GitHub Actions for scheduling and execution
+
+## Setup
+
+Install the declared dependencies from this directory:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+The Telegram-enabled scripts require `TELEGRAM_BOT_TOKEN` and
+`TELEGRAM_CHAT_ID` environment variables. The scheduled workflow reads these
+values from GitHub Actions secrets.
+
+The main one-shot monitor is `check_vacancies.py`. The other root monitors are
+alternative RSS workflows. The scripts under `industry_filler/` use the Excel
+files in that directory and maintain `company_vacancies.db`; they can be run
+from any working directory because their input paths are based on the script
+location.
+
+Vacancies without a reliable publication date are ignored rather than treated
+as recent. State files are written atomically so an interrupted run does not
+leave partially written JSON.
 
 ## License
 

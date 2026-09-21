@@ -6,6 +6,10 @@ on:
     - cron: "*/5 * * * *"
   workflow_dispatch: {}  # GitHub saytida qo'lda ishga tushirish uchun
 
+concurrency:
+  group: check-vacancies
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
