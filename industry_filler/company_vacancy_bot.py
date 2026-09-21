@@ -40,7 +40,7 @@ DB_FILE      = BASE_DIR / "company_vacancies.db"
 
 MAX_AGE_DAYS    = 3
 MAX_WORKERS     = 8
-BATCH_SIZE      = 10
+BATCH_SIZE      = 30
 MAX_PER_COMPANY = 1
 
 TARGET_INDUSTRY = "Moliya / Bank / Fintech"

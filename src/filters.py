@@ -16,16 +16,34 @@ import requests
 LOGGER = logging.getLogger(__name__)
 
 _INCLUDE_TERMS = (
-    "analyst", "аналитик", "tahlilchi",
-    "manager", "менеджер", "menejer",
-    "coordinator", "координатор", "koordinator",
-    "specialist", "специалист", "mutaxassis",
-    "consultant", "консультант", "maslahatchi",
-    "lawyer", "юрист", "yurist", "advokat",
-    "auditor", "аудитор", "auditor",
-    "accountant", "бухгалтер", "buxgalter",
-    "recruiter", "рекрутер", "rekruter",
-    "marketer", "маркетолог", "marketolog",
+    # English
+    "analyst", "manager", "coordinator", "specialist",
+    "consultant", "lawyer", "auditor", "accountant",
+    "recruiter", "marketer", "economist", "financier",
+    "officer", "director", "assistant", "administrator",
+    "developer", "engineer", "supervisor", "head",
+    "intern", "trainee", "junior", "associate",
+    "compliance", "risk", "treasury", "controller",
+    "underwriter", "actuary", "teller", "cashier",
+
+    # Russian
+    "аналитик", "менеджер", "координатор", "специалист",
+    "консультант", "юрист", "аудитор", "бухгалтер",
+    "рекрутер", "маркетолог", "экономист", "финансист",
+    "директор", "помощник", "администратор", "сотрудник",
+    "инспектор", "контролер", "операционист", "кассир",
+    "руководитель", "начальник", "ассистент", "офицер",
+    "стажер", "стажёр", "риск", "казначей", "андеррайтер",
+    "комплаенс", "финансовый", "кредитный", "операционный",
+    "главный", "ведущий", "старший", "младший",
+
+    # Uzbek
+    "tahlilchi", "menejer", "koordinator", "mutaxassis",
+    "maslahatchi", "yurist", "auditor", "buxgalter",
+    "rekruter", "marketolog", "iqtisodchi", "moliyachi",
+    "direktor", "yordamchi", "administrator", "inspektor",
+    "xodim", "rahbar", "boshliq", "asistent",
+    "stajyor", "moliyaviy", "kredit", "operatsion",
 )
 
 _EXCLUDE_TERMS = (
@@ -33,33 +51,40 @@ _EXCLUDE_TERMS = (
     "cleaner", "уборщик", "уборщица", "farrosh",
     "cook", "повар", "oshpaz",
     "security guard", "охранник", "qorovul",
-    "cashier", "кассир", "kassir",
+    "loader", "грузчик", "yukchi",
+    "janitor", "дворник",
+    "courier", "курьер", "kuryer",
 )
 
 _NO_EXPERIENCE_TERMS = (
     "без опыта", "tajribasiz", "no experience",
+    "без опыта работы", "опыт не требуется",
+    "experience not required",
 )
 
 _JUNIOR_TERMS = (
     "junior", "стажер", "стажёр", "intern", "trainee",
+    "помощник", "assistant", "yordamchi", "stajyor",
 )
 
 _ONE_TO_THREE_YEAR_TERMS = (
     "1-3 года", "1–3 года", "1 yil", "1 year",
+    "от 1 года", "от 1 до 3", "1-3 years",
+    "2 года", "2 yil", "2 years",
+    "3 года", "3 yil", "3 years",
 )
 
 _SENIOR_TERMS = (
-    "senior director", "старший директор", "senior",
+    "senior director", "старший директор",
 )
 
 _HIGH_EXPERIENCE_PATTERN = re.compile(
-    r"(?:от\s*)?(?:[5-9]|\d{2,})\s*\+?\s*"
+    r"(?:от\s*)?(?:[6-9]|\d{2,})\s*\+?\s*"
     r"(?:лет|года|год|years?|year|yil)",
     re.IGNORECASE,
 )
 _HTML_TAG_PATTERN = re.compile(r"<[^>]+>")
 
-# Aniqroq bank kalit so'zlari — umumiy so'zlar olib tashlandi
 _BANK_KEYWORDS = (
     "bank", "banki", "moliya",
     "кредит", "credit", "kredit",
@@ -70,7 +95,6 @@ _BANK_KEYWORDS = (
     "мфо", "мкб", "акб",
 )
 
-# Aniqroq target industries
 TARGET_INDUSTRIES = {
     "moliya / bank / fintech",
     "moliya / bank",
@@ -78,6 +102,9 @@ TARGET_INDUSTRIES = {
     "финансы / банки / fintech",
     "финансы",
     "banking",
+    "moliya",
+    "финансы / банки",
+    "bank",
 }
 
 KNOWN_BANK_COMPANIES = {
@@ -143,7 +170,7 @@ def _name_fuzzy_match(name: str, fuzzy_threshold: int = 85) -> bool:
 def _get_cached_enrichment(name: str) -> dict | None:
     if _ENRICHMENT_STORE is None:
         return None
-    return _ENRICHMENT_STORE.get_enrichment(name)
+    return _ENRICHMENT_STORE.get_enrichment(name) # type: ignore
 
 
 def _save_enrichment(
@@ -153,7 +180,7 @@ def _save_enrichment(
     source: str,
 ) -> None:
     if _ENRICHMENT_STORE is not None:
-        _ENRICHMENT_STORE.save_enrichment(
+        _ENRICHMENT_STORE.save_enrichment( # type: ignore
             name,
             is_finance=is_finance,
             source=source,
@@ -213,7 +240,6 @@ def _check_hh_employer(employer_id: str | None) -> dict | None | object:
 
 
 def _check_openinfo_uz(company_name: str) -> dict | None | object:
-    """Openinfo.uz — faqat aniq OKVED 64-66 bo'lsa qabul qiladi."""
     try:
         response = requests.get(
             _OPENINFO_URL,
@@ -226,7 +252,6 @@ def _check_openinfo_uz(company_name: str) -> dict | None | object:
         return _SOURCE_ERROR
 
     content = normalize_text(response.text)
-    # Faqat OKVED kodi orqali tekshiramiz — kalit so'z emas
     code_matches = re.findall(
         r"(?:OK(?:ED|VED)|ОКЭД|ОКВЭД)\s*[:#-]?\s*(\d{2})",
         content,
@@ -303,19 +328,18 @@ def _check_duckduckgo(name: str) -> dict | None | object:
     if data is None:
         return None
 
-    parts = [str(data.get("Abstract", ""))]
-    for topic in data.get("RelatedTopics", []):
+    parts = [str(data.get("Abstract", ""))] # type: ignore
+    for topic in data.get("RelatedTopics", []): # type: ignore
         if isinstance(topic, dict):
             parts.append(str(topic.get("Text", "")))
     content = " ".join(parts).casefold()
 
-    # Faqat aniq bank so'zlari
     finance_terms = (
         "bank", "banking", "finance", "financial", "credit", "insurance",
         "fintech", "банк", "финанс", "кредит", "страхов", "молия",
     )
     is_finance = any(term in content for term in finance_terms)
-    confidence = 55 if data.get("Abstract") and is_finance else 35 if is_finance else 0
+    confidence = 55 if data.get("Abstract") and is_finance else 35 if is_finance else 0 # pyright: ignore[reportAttributeAccessIssue]
     return {"is_finance": is_finance, "confidence": confidence, "source": "duckduckgo"}
 
 
@@ -331,20 +355,20 @@ def _enrich_company(name: str, employer_id: str | None = None) -> dict | None:
         if result is _SOURCE_ERROR:
             source_error = True
             continue
-        if result and result.get("is_finance"):
+        if result and result.get("is_finance"): # type: ignore
             _save_enrichment(
                 name,
                 True,
-                int(result["confidence"]),
-                str(result["source"]),
+                int(result["confidence"]), # type: ignore
+                str(result["source"]), # type: ignore
             )
             LOGGER.info(
                 "Enriched via %s: %s -> finance (confidence=%s)",
-                result["source"],
+                result["source"], # type: ignore
                 name,
-                result["confidence"],
+                result["confidence"], # type: ignore
             )
-            return result
+            return result # type: ignore
 
     if source_error:
         return None
@@ -371,8 +395,12 @@ def is_bank_company(
     score = 0
 
     # Industry ustuni — 40 ball
-    if normalize_text(industry).casefold() in TARGET_INDUSTRIES:
+    normalized_industry = normalize_text(industry).casefold()
+    if normalized_industry in TARGET_INDUSTRIES:
         score += 40
+    # Industry da bank kalit so'zi bo'lsa ham hisoblash
+    elif any(term in normalized_industry for term in _BANK_KEYWORDS):
+        score += 30
 
     # Nom kalit so'z — 30 ball
     if _name_has_bank_keyword(normalized):
@@ -382,23 +410,21 @@ def is_bank_company(
     if _name_fuzzy_match(normalized, fuzzy_threshold):
         score += 20
 
-    # Threshold: 50 — yangi, eski 40 dan yuqori
-    if score >= 50:
+    if score >= 40:  # 50 dan 40 ga tushirildi
         LOGGER.info("Company decision: %s -> True (score=%s)", name, score)
         return True
 
     # Online enrichment — faqat score past bo'lsa
-    if score < 50:
-        cached = _get_cached_enrichment(normalized)
-        if cached is not None:
-            if cached.get("is_finance") and int(cached.get("confidence", 0)) >= 85:
-                score += int(cached.get("confidence", 0))
-        elif _ENRICHMENT_STORE is not None:
-            enriched = _enrich_company(normalized, employer_id)
-            if enriched and enriched.get("is_finance") and int(enriched.get("confidence", 0)) >= 85:
-                score += int(enriched.get("confidence", 0))
+    cached = _get_cached_enrichment(normalized)
+    if cached is not None:
+        if cached.get("is_finance") and int(cached.get("confidence", 0)) >= 85:
+            score += int(cached.get("confidence", 0))
+    elif _ENRICHMENT_STORE is not None:
+        enriched = _enrich_company(normalized, employer_id)
+        if enriched and enriched.get("is_finance") and int(enriched.get("confidence", 0)) >= 85:
+            score += int(enriched.get("confidence", 0))
 
-    result = score >= 50
+    result = score >= 40
     LOGGER.info("Company decision: %s -> %s (score=%s)", name, result, score)
     return result
 
@@ -429,7 +455,7 @@ def is_experience_allowed(description: str) -> tuple[bool, str]:
 
 def is_recent(
     published_at: datetime | None,
-    max_age_days: int = 3,
+    max_age_days: int = 7,  # 3 dan 7 ga oshirildi
 ) -> bool:
     if published_at is None:
         return False

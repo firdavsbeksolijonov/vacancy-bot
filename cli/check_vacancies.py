@@ -55,6 +55,5 @@ def main() -> int:
     finally:
         state_store.close()
 
-
 if __name__ == "__main__":
     raise SystemExit(main())
