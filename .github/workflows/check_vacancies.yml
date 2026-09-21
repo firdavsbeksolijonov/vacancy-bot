@@ -1,10 +1,9 @@
-name: Check hh.uz data analytics vacancies
+name: Vacancy Bot
 
 on:
   schedule:
-    # Har 5 daqiqada ishga tushadi (UTC vaqti bo'yicha)
-    - cron: "*/5 * * * *"
-  workflow_dispatch: {}  # GitHub saytida qo'lda ishga tushirish uchun
+    - cron: '0 */2 * * *'  # Har 2 soatda
+  workflow_dispatch: {}
 
 concurrency:
   group: check-vacancies
@@ -13,10 +12,9 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+
     steps:
-      - name: Repo'ni olish
+      - name: Repo ni olish
         uses: actions/checkout@v4
 
       - name: Python o'rnatish
@@ -24,27 +22,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Kutubxonalarni o'rnatish
-        run: pip install -r requirements.txt
+      - name: Kutubxonalar o'rnatish
+        run: pip install requests feedparser rapidfuzz pandas openpyxl
 
-      - name: Tarmoq diagnostikasi (hh.uz'ga ulanishni tekshirish)
-        continue-on-error: true
-        run: |
-          echo "--- curl orqali tashkent.hh.uz ---"
-          curl -sS -m 10 -o /dev/null -w "HTTP status: %{http_code} | Vaqt: %{time_total}s\n" https://tashkent.hh.uz/ || echo "curl HAM ulana olmadi — bu haqiqiy tarmoq/IP darajasidagi blok"
-          echo "--- DNS tekshiruvi ---"
-          getent hosts tashkent.hh.uz || echo "DNS orqali topilmadi"
+      - name: DB ni cache dan olish
+        uses: actions/cache@v4
+        with:
+          path: industry_filler/company_vacancies.db
+          key: vacancy-db-${{ github.run_id }}
+          restore-keys: |
+            vacancy-db-
 
-      - name: Vakansiyalarni tekshirish va Telegramga yuborish
+      - name: Botni ishga tushirish
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python industry_filler/company_vacancy_bot.py
-
-      - name: seen_ids.json holatini repo'ga saqlash
-        run: |
-          git config user.name "hh-vacancy-bot"
-          git config user.email "actions@github.com"
-          git add seen_ids.json
-          git diff --staged --quiet || git commit -m "Update seen vacancy ids"
-          git push
