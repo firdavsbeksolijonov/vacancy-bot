@@ -39,7 +39,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python check_vacancies.py
+        run: python company_vacancy_bot.py
 
       - name: seen_ids.json holatini repo'ga saqlash
         run: |
